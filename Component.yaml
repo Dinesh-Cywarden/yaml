@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: Chatbt
   description: 'A frontend chatbot for AI project'
+  annotations:
+    github.com/project-slug: Dinesh-Cywarden/myProject
   labels:
     owner: Dinesh-Cywarden
     team: frontend
