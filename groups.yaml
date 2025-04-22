@@ -9,6 +9,5 @@ spec:
     displayName: FrontEnd
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
-  parent:
   children: []
   members: [dineshCywarden]
