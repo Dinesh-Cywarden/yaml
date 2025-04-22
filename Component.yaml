@@ -4,12 +4,12 @@ metadata:
   name: Chatbt
   description: 'A frontend chatbot for AI project'
   labels:
-    owner: dineshCywarden
+    owner: Dinesh-Cywarden
     team: frontend
 spec:
   type: service
   lifecycle: development
-  owner: dineshCywarden
+  owner: Dinesh-Cywarden
   links:
     - url: https://github.com/Dinesh-Cywarden/myProject
   sources:
