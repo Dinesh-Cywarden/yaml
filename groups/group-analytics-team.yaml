@@ -6,7 +6,7 @@ metadata:
   description: Team responsible for chatbot usage metrics and dashboards
 spec:
   type: team
-  parent: data
+  parent: "group:data"
   children: []
   members:
     - dinesh
