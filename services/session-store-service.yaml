@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: session-store-service
+  title: Session Store Service
+  description: Persists user sessions and conversation context
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Dinesh
+  providesApis:
+    - session-api
+  consumesApis: []
+  partOf:
+    - chatbot-system
