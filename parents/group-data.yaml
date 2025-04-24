@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: data
+  title: Data Organization
+  description: Top‑level data and analytics group
+spec:
+  type: org
+  children:
+    - analytics-team
+  members: []
