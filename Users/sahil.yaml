@@ -7,4 +7,4 @@ spec:
     displayName: Sahil Sehgal
     email: sahil.s@cywarden.com
   memberOf:
-    - group: analytics-team
+    - "group: analytics-team"
