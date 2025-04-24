@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: analytics-system
+  title: Analytics System
+  description: Components for capturing and visualizing chatbot metrics
+spec:
+  owner: user:Dinesh
+  providesApis:
+    - analytics-api
+  consumesServices:
+    - chat-processing-service
