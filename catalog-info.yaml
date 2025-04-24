@@ -5,6 +5,7 @@ metadata:
   annotations:
     github.com/user-login: Dinesh-Cywarden
     github.com/project-slug: Dinesh-Cywarden/myProject
+    github.com/project-slug: Dinesh-Cywarden/yaml
 spec:
   profile:
     displayName: Dinesh Cywarden
