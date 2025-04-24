@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nlp-service
+  title: NLP Microservice
+  description: Natural Language Understanding and intent classification
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Dinesh
+  providesApis:
+    - nlp-api
+  consumesApis: []
+  partOf:
+    - chatbot-system
