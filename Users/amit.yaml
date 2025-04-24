@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Amit
+spec:
+  profile:
+    displayName: Amit Kumar
+    email: a.kumar@cywarden.com
+  memberOf:
+    - group: chatbot-team
