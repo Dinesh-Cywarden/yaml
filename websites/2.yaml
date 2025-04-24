@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: payments-docs
-  title: Payments Documentation Site
-  description: Static site hosting API reference and developer guides for payment services
+  name: chatbot-docs
+  title: Chatbot Documentation
+  description: Static site with usage guides, API reference, and troubleshooting
 spec:
   type: website
   lifecycle: production
   owner: user:Dinesh
   consumesApis:
-    - payments-api
-    - payments-utils-api
+    - chat-api
+    - nlp-api
   partOf:
-    - payments-system
+    - chatbot-system
