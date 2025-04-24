@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Ranjeet
+spec:
+  profile:
+    displayName: Ranjeet Sekhon
+    email: ranjeet@cywarden.com
+  memberOf:
+    - group: chatbot-team
