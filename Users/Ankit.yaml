@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Ankit
+spec:
+  profile:
+    displayName: Ankit Bansal
+    email: ankit.b@cywarden.com
+  memberOf:
+    - "group: chatbot-team"
