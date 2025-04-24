@@ -7,6 +7,7 @@ metadata:
 spec:
   type: team
   parent: data
+  children: []
   members:
     - dinesh
     - frank
