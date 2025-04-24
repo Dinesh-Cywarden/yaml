@@ -6,7 +6,7 @@ metadata:
   description: Team responsible for building and maintaining the chatbot
 spec:
   type: team
-  parent: engineering
+  parent: "group:engineering"
   children: []
   members:
     - Harpreet
