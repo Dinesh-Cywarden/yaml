@@ -4,7 +4,7 @@ metadata:
   name: Dinesh
   annotations:
     github.com/user-login: Dinesh-Cywarden
-    github.com/project-slug: Dinesh-Cywarden/*
+    github.com/project-slug: Dinesh-Cywarden/myProject
 spec:
   profile:
     displayName: Dinesh Cywarden
