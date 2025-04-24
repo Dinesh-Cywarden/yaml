@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Parv
+spec:
+  profile:
+    displayName: Parv Sablok
+    email: p.sablok@cywarden.com
+  memberOf:
+    - group: chatbot-team
