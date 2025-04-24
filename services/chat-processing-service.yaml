@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chat-processing-service
+  title: Chat Processing Service
+  description: Core service that routes user messages to NLP and session store
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Dinesh
+  providesApis:
+    - chat-api
+  consumesApis:
+    - nlp-api
+    - session-api
+  partOf:
+    - chatbot-system
