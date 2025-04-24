@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: admin-portal
+  title: Chatbot Admin Portal
+  description: Internal UI for managing intents, training data, and user sessions
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Dinesh
+  consumesApis:
+    - chat-api
+    - session-api
+  partOf:
+    - chatbot-system
