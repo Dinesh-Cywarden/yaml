@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: portal-landing
+  title: Developer Portal Landing
+  description: Main landing page for the internal developer portal
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Dinesh
