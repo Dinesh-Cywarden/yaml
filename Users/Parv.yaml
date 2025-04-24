@@ -7,4 +7,4 @@ spec:
     displayName: Parv Sablok
     email: p.sablok@cywarden.com
   memberOf:
-    - group: chatbot-team
+    - "group: chatbot-team"
