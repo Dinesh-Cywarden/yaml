@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: analytics-team
+  title: Analytics Team
+  description: Team responsible for chatbot usage metrics and dashboards
+spec:
+  type: team
+  parent: data
+  members:
+    - dinesh
+    - frank
+    - grace
+    - heidi
+    - ivan
