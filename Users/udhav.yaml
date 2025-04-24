@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Udhav
+spec:
+  profile:
+    displayName: Udhav Kansal
+    email: udhav.k@cywarden.com
+  memberOf:
+    - group: chatbot-team
