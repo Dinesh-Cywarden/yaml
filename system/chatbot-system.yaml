@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: chatbot-system
+  title: Chatbot System
+  description: All components that power the chatbot experience
+spec:
+  owner: user:Dinesh
+  providesApis:
+    - chat-api
+    - nlp-api
+    - session-api
+  consumesServices:
+    - chat-processing-service
+    - nlp-service
+    - session-store-service
