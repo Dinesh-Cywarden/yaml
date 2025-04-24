@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payments-docs
+  title: Payments Documentation Site
+  description: Static site hosting API reference and developer guides for payment services
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Dinesh
+  consumesApis:
+    - payments-api
+    - payments-utils-api
+  partOf:
+    - payments-system
