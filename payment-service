@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payments-service
+  title: Payments Service
+  description: Handles payment processing and reconciliation
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Dinesh
+  providesApis:
+    - payments-api
+  partOf:
+    - payments-system
