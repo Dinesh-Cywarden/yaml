@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Aayush
+spec:
+  profile:
+    displayName: Aayush Thakur
+    email: aayush.t@cywarden.com
+  memberOf:
+    - group: chatbot-team
