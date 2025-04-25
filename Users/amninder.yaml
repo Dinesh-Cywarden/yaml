@@ -7,4 +7,4 @@ spec:
     displayName: Amninder Singh
     email: amninder.s@cywarden.com
   memberOf:
-    - "group: analytics-team"
+    - "group:analytics-team"
