@@ -7,5 +7,5 @@ spec:
     displayName: Ankit Bansal
     email: ankit.b@cywarden.com
   memberOf:
-    - "group: chatbot-team"
+    - "group:chatbot-team"
 
