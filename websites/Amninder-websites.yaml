@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: traffic-analytics-dashboard
+  title: Traffic Analytics Dashboard
+  description: Web-based dashboard for viewing user activity metrics across chatbot components
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amninder
+  system: data-observability-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: realtime-events-monitor
+  title: Realtime Events Monitor
+  description: Live event tracking interface for debugging and latency inspection
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amninder
+  system: data-observability-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: heatmap-visualizer
+  title: Heatmap Visualizer
+  description: Visualizes user session behavior in real-time using heatmaps and time charts
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amninder
+  system: chatbot-optimization-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: session-load-balancer-ui
+  title: Session Load Balancer UI
+  description: Interface for viewing and configuring chatbot session balancing policies
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amninder
+  system: chatbot-optimization-system
