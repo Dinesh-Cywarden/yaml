@@ -1,52 +1,46 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: chat-processing-service
-  title: Chat Processing Service
-  description: Core service that routes user messages to NLP and session store
+  name: model-inference-engine
+  title: Model Inference Engine
+  description: Core service for executing AI model inference requests for the chatbot
 spec:
-  lifecycle: production
-  owner: user:harpreet
   type: service
+  lifecycle: production
+  owner: user:Harpreet
   providesApis:
-    - chat-api
-  consumesApis:
-    - nlp-api
-    - session-api
+    - inference-api
   partOf:
-    - chatbot-system
+    - model-execution-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: user-auth-service
-  title: User Authentication Service
-  description: Handles user sign-in, sign-up, and session validation
+  name: response-logger-service
+  title: Response Logger Service
+  description: Logs AI-generated chatbot responses for auditing and training analysis
 spec:
-  lifecycle: production
-  owner: user:harpreet
   type: service
+  lifecycle: production
+  owner: user:Harpreet
   providesApis:
-    - auth-api
+    - logger-api
   consumesApis:
-    - db-api
+    - inference-api
   partOf:
-    - auth-system
+    - feedback-learning-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: analytics-service
-  title: Analytics Service
-  description: Tracks and aggregates usage metrics and user activity
+  name: sentiment-analysis-service
+  title: Sentiment Analysis Service
+  description: Scores user messages for sentiment to guide chatbot response tone
 spec:
-  lifecycle: production
-  owner: user:harpreet
   type: service
+  lifecycle: production
+  owner: user:Harpreet
   providesApis:
-    - analytics-api
-  consumesApis:
-    - db-api
+    - sentiment-api
   partOf:
-    - analytics-system
----
+    - model-execution-system
