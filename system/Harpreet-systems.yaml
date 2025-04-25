@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: model-execution-system
+  title: Model Execution System
+  description: Manages AI model inference workflows and prediction pipelines
+spec:
+  owner: user:Harpreet
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: feedback-learning-system
+  title: Feedback Learning System
+  description: Collects chatbot feedback and helps train future response behaviors
+spec:
+  owner: user:Harpreet
