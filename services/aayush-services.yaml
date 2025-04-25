@@ -1,0 +1,52 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chat-processing-service
+  title: Chat Processing Service
+  description: Core service that routes user messages to NLP and session store
+spec:
+  lifecycle: production
+  owner: user:aayush
+  type: service
+  providesApis:
+    - chat-api
+  consumesApis:
+    - nlp-api
+    - session-api
+  partOf:
+    - chatbot-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: user-auth-service
+  title: User Authentication Service
+  description: Handles user sign-in, sign-up, and session validation
+spec:
+  lifecycle: production
+  owner: user:aayush
+  type: service
+  providesApis:
+    - auth-api
+  consumesApis:
+    - db-api
+  partOf:
+    - auth-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: analytics-service
+  title: Analytics Service
+  description: Tracks and aggregates usage metrics and user activity
+spec:
+  lifecycle: production
+  owner: user:aayush
+  type: service
+  providesApis:
+    - analytics-api
+  consumesApis:
+    - db-api
+  partOf:
+    - analytics-system
+---
