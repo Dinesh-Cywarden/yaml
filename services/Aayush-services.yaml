@@ -1,0 +1,50 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chatbot-frontend-ui
+  title: Chatbot Frontend UI
+  description: React-based UI for interacting with the chatbot in real-time
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Aayush
+  providesApis:
+    - chatbot-ui-api
+  consumesApis:
+    - chat-processing-api
+  partOf:
+    - frontend-chatbot-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: real-time-message-handler
+  title: Real-time Message Handler
+  description: WebSocket-based service that streams user messages to backend NLP engine
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Aayush
+  providesApis:
+    - message-stream-api
+  consumesApis:
+    - nlp-api
+  partOf:
+    - frontend-chatbot-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: context-persistence-service
+  title: Context Persistence Service
+  description: Stores user conversation history and context for personalized responses
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Aayush
+  providesApis:
+    - context-api
+  consumesApis:
+    - session-api
+  partOf:
+    - user-context-system
