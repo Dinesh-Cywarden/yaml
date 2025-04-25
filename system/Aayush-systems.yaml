@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: frontend-chatbot-system
+  title: Frontend Chatbot System
+  description: Collection of services and components supporting chatbot UI and user interactions
+spec:
+  owner: user:Aayush
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: user-context-system
+  title: User Context System
+  description: Manages user-specific conversation context, session data, and personalization
+spec:
+  owner: user:Aayush
