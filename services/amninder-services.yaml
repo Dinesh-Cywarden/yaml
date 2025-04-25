@@ -1,52 +1,48 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: chat-processing-service
-  title: Chat Processing Service
-  description: Core service that routes user messages to NLP and session store
+  name: event-streaming-service
+  title: Event Streaming Service
+  description: Collects and streams user interaction events from the chatbot in real-time
 spec:
-  lifecycle: production
-  owner: user:amninder
   type: service
+  lifecycle: production
+  owner: user:Amninder
   providesApis:
-    - chat-api
-  consumesApis:
-    - nlp-api
-    - session-api
+    - event-stream-api
   partOf:
-    - chatbot-system
+    - data-observability-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: user-auth-service
-  title: User Authentication Service
-  description: Handles user sign-in, sign-up, and session validation
+  name: analytics-data-warehouse
+  title: Analytics Data Warehouse
+  description: Stores long-term chatbot usage data for advanced querying and reporting
 spec:
-  lifecycle: production
-  owner: user:amninder
   type: service
+  lifecycle: production
+  owner: user:Amninder
   providesApis:
-    - auth-api
+    - warehouse-api
   consumesApis:
-    - db-api
+    - event-stream-api
   partOf:
-    - auth-system
+    - data-observability-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: analytics-service
-  title: Analytics Service
-  description: Tracks and aggregates usage metrics and user activity
+  name: session-heatmap-service
+  title: Session Heatmap Service
+  description: Provides visual session activity heatmaps to support traffic analysis and load balancing
 spec:
-  lifecycle: production
-  owner: user:amninder
   type: service
+  lifecycle: production
+  owner: user:Amninder
   providesApis:
-    - analytics-api
+    - heatmap-api
   consumesApis:
-    - db-api
+    - warehouse-api
   partOf:
-    - analytics-system
----
+    - chatbot-optimization-system
