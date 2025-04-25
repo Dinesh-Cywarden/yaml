@@ -1,52 +1,51 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: chat-processing-service
-  title: Chat Processing Service
-  description: Core service that routes user messages to NLP and session store
+  name: intent-classification-engine
+  title: Intent Classification Engine
+  description: Core microservice that classifies user intent from text input using ML models
 spec:
-  lifecycle: production
-  owner: user:amit
   type: service
+  lifecycle: production
+  owner: user:Amit
   providesApis:
-    - chat-api
+    - intent-api
   consumesApis:
     - nlp-api
-    - session-api
   partOf:
-    - chatbot-system
+    - ai-core-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: user-auth-service
-  title: User Authentication Service
-  description: Handles user sign-in, sign-up, and session validation
+  name: response-generator-service
+  title: Response Generator Service
+  description: Generates dynamic and personalized responses using intent and context data
 spec:
-  lifecycle: production
-  owner: user:amit
   type: service
+  lifecycle: production
+  owner: user:Amit
   providesApis:
-    - auth-api
+    - response-api
   consumesApis:
-    - db-api
+    - context-api
+    - intent-api
   partOf:
-    - auth-system
+    - ai-core-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: analytics-service
-  title: Analytics Service
-  description: Tracks and aggregates usage metrics and user activity
+  name: feedback-loop-analyzer
+  title: Feedback Loop Analyzer
+  description: Analyzes user feedback to improve response accuracy and user satisfaction
 spec:
-  lifecycle: production
-  owner: user:amit
   type: service
+  lifecycle: production
+  owner: user:Amit
   providesApis:
-    - analytics-api
+    - feedback-api
   consumesApis:
-    - db-api
+    - response-api
   partOf:
-    - analytics-system
----
+    - analytics-optimization-system
