@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: model-performance-dashboard
+  title: Model Performance Dashboard
+  description: Web app to track and compare AI model accuracy and latency
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Harpreet
+  system: model-execution-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: response-quality-review
+  title: Response Quality Review
+  description: Interface for QA teams to rate chatbot responses and provide corrections
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Harpreet
+  system: feedback-learning-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sentiment-visualizer
+  title: Sentiment Visualizer
+  description: Web interface to visualize sentiment scores and trends over time
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Harpreet
+  system: model-execution-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chatbot-feedback-dashboard
+  title: Chatbot Feedback Dashboard
+  description: Displays aggregated user feedback for continuous chatbot improvement
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Harpreet
+  system: feedback-learning-system
