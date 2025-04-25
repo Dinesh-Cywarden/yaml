@@ -6,7 +6,7 @@ metadata:
   description: Core service that routes user messages to NLP and session store
 spec:
   lifecycle: production
-  owner: user:aayush
+  owner: user:Aayush
   type: service
   providesApis:
     - chat-api
@@ -24,7 +24,7 @@ metadata:
   description: Handles user sign-in, sign-up, and session validation
 spec:
   lifecycle: production
-  owner: user:aayush
+  owner: user:Aayush
   type: service
   providesApis:
     - auth-api
@@ -41,7 +41,7 @@ metadata:
   description: Tracks and aggregates usage metrics and user activity
 spec:
   lifecycle: production
-  owner: user:aayush
+  owner: user:Aayush
   type: service
   providesApis:
     - analytics-api
