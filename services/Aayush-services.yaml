@@ -4,6 +4,8 @@ metadata:
   name: chatbot-frontend-ui
   title: Chatbot Frontend UI
   description: React-based UI for interacting with the chatbot in real-time
+  annotations:
+    jira/project-key: SEC
 spec:
   type: service
   lifecycle: production
