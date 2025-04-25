@@ -1,6 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
+  annotations:
+    jira/project-key: SEC
   name: Dinesh
   annotations:
     github.com/user-login: Dinesh-Cywarden
