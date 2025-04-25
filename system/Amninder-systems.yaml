@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: data-observability-system
+  title: Data Observability System
+  description: Tracks, stores, and visualizes data flow for analytics and reporting in the chatbot ecosystem
+spec:
+  owner: user:Amninder
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: chatbot-optimization-system
+  title: Chatbot Optimization System
+  description: Enhances chatbot performance through session analytics and predictive metrics
+spec:
+  owner: user:Amninder
