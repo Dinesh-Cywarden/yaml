@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-training-dashboard
+  title: AI Training Dashboard
+  description: Admin panel to monitor and manage ML training data for the chatbot
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amit
+  system: ai-core-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: feedback-review-console
+  title: Feedback Review Console
+  description: Internal tool for reviewing user feedback and annotating conversations
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amit
+  system: analytics-optimization-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ai-metrics-portal
+  title: AI Metrics Portal
+  description: Web app for visualizing ML model performance and system health
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amit
+  system: analytics-optimization-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bot-tuning-interface
+  title: Bot Tuning Interface
+  description: Allows fine-tuning of response behavior and tone configuration
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Amit
+  system: ai-core-system
