@@ -1,43 +1,47 @@
 apiVersion: backstage.io/v1alpha1
-kind: Website
+kind: Component
 metadata:
   name: chatbot-ui-website
   title: Chatbot UI Website
   description: Frontend site for users to interact with the chatbot
 spec:
   owner: user:Aayush
+  type: website
   lifecycle: production
   system: frontend-chatbot-system
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Website
+kind: Component
 metadata:
   name: chatbot-insights-portal
   title: Chatbot Insights Portal
   description: Dashboard for visualizing user engagement and real-time chatbot performance
 spec:
   owner: user:Aayush
+  type: website
   lifecycle: production
   system: frontend-chatbot-system
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Website
+kind: Component
 metadata:
   name: conversation-history-hub
   title: Conversation History Hub
   description: Web interface for viewing past user conversations and context logs
 spec:
   owner: user:Aayush
+  type: website
   lifecycle: production
   system: user-context-system
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Website
+kind: Component
 metadata:
   name: persona-tuner-portal
   title: Persona Tuner Portal
   description: Allows admins to define and customize chatbot persona and tone
 spec:
   owner: user:Aayush
+  type: website
   lifecycle: production
   system: user-context-system
