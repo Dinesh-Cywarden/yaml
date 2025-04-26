@@ -7,4 +7,4 @@ spec:
     displayName: Udhav Kansal
     email: udhav.k@cywarden.com
   memberOf:
-    - "group: chatbot-team"
+    - "group:chatbot-team"
