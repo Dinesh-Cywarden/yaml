@@ -19,6 +19,8 @@ metadata:
   name: analytics-data-warehouse
   title: Analytics Data Warehouse
   description: Stores long-term chatbot usage data for advanced querying and reporting
+  annotations:
+    github.com/project-slug: Dinesh-Cywarden/myProject
 spec:
   type: service
   lifecycle: production
