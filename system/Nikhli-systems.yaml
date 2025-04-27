@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: chatbot-analytics-system
+  title: Chatbot Analytics System
+  description: Provides detailed insights and data analysis for chatbot usage
+spec:
+  owner: user:Nikhil
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: system-monitoring-platform
+  title: System Monitoring Platform
+  description: Centralized platform to monitor errors, latency, and system health
+spec:
+  owner: user:Nikhil
