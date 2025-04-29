@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: operations
+  title: Operations
+  description: Backend and infrastructure services that support chatbot functionality
+spec:
+  owner: group:analytics-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: sales
+  title: Sales
+  description: Components and services supporting chatbot lead generation and user engagement
+spec:
+  owner: group:chatbot-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: human-resources
+  title: Human Resources
+  description: Chatbot integrations and services for internal HR tools and automation
+spec:
+  owner: group:analytics-team
