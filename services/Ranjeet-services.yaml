@@ -1,0 +1,44 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: intent-detection-service
+  title: Intent Detection Service
+  description: Detects user intent in chat messages using deep learning models
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Ranjeet
+  providesApis:
+    - intent-api
+  partOf:
+    - smart-dialog-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: context-manager-service
+  title: Context Manager Service
+  description: Maintains user context across multi-turn conversations
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Ranjeet
+  providesApis:
+    - context-api
+  partOf:
+    - smart-dialog-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fallback-reply-service
+  title: Fallback Reply Service
+  description: Generates helpful fallback responses when chatbot confidence is low
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Ranjeet
+  providesApis:
+    - fallback-api
+  partOf:
+    - conversation-rescue-system
