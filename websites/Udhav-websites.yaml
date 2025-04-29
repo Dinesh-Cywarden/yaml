@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: routing-insight-portal
+  title: Routing Insight Portal
+  description: Visual interface showing routing decision trees and stats
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Udhav
+  system: smart-routing-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: archive-replay-viewer
+  title: Archive Replay Viewer
+  description: Tool to replay stored conversations from archive
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Udhav
+  system: archive-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: variant-testing-dashboard
+  title: Variant Testing Dashboard
+  description: UI for monitoring chatbot A/B test results
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Udhav
+  system: smart-routing-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: message-flow-tracer
+  title: Message Flow Tracer
+  description: Traces real-time flow of messages through different modules
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Udhav
+  system: smart-routing-system
