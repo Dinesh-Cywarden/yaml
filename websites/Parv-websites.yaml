@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: training-dashboard
+  title: Training Dashboard
+  description: UI to track and trigger chatbot model training jobs
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Parv
+  system: ai-optimization-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: optimization-monitor
+  title: Optimization Monitor
+  description: Frontend to monitor real-time optimization and feedback incorporation
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Parv
+  system: ai-optimization-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: knowledge-center
+  title: Knowledge Center
+  description: Portal to edit FAQs, help articles, and manage chatbot knowledge base
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Parv
+  system: content-management-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: content-management-portal
+  title: Content Management Portal
+  description: Web interface for managing chatbot static responses and fallback scenarios
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Parv
+  system: content-management-system
