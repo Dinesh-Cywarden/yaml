@@ -1,0 +1,49 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: chatbot-analytics
+  title: Chatbot Analytics Dashboard
+  description: Tracks and visualizes usage metrics for the chatbot
+spec:
+  owner: ai-team/ops
+  type: website
+
+  parameters:
+    - title: Analytics Setup
+      required:
+        - name
+        - repoUrl
+      properties:
+        name:
+          type: string
+          title: Dashboard Name
+        repoUrl:
+          title: GitHub Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts: ['github.com']
+
+  steps:
+    - id: fetch-base
+      name: Fetch Analytics Template
+      action: fetch:template
+      input:
+        url: ./templates/chatbot-analytics
+        values:
+          name: ${{ parameters.name }}
+
+    - id: publish
+      name: Publish Dashboard
+      action: publish:github
+      input:
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: main
+        description: Analytics and telemetry dashboard for chatbot
+
+    - id: register
+      name: Register Dashboard
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        catalogInfoPath: /catalog-info.yaml
