@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: chatbot-analytics-dashboard
+  title: Chatbot Analytics Dashboard
+  description: Visual dashboard for chatbot metrics and KPIs
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Nikhil
+  system: chatbot-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: user-behavior-tracker
+  title: User Behavior Tracker
+  description: Frontend to explore how users interact with the chatbot
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Nikhil
+  system: chatbot-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: error-monitoring-portal
+  title: Error Monitoring Portal
+  description: UI to monitor chatbot errors and performance bottlenecks
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Nikhil
+  system: system-monitoring-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: system-health-dashboard
+  title: System Health Dashboard
+  description: Web interface to check real-time chatbot system health and uptime
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Nikhil
+  system: system-monitoring-platform
