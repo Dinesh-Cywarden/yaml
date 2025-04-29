@@ -1,0 +1,50 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: chatbot-core-service
+  title: Chatbot Core API Service
+  description: Scaffolds the core backend service for the AI chatbot
+spec:
+  owner: ai-team/core
+  type: service
+
+  parameters:
+    - title: Core Service Setup
+      required:
+        - name
+        - repoUrl
+      properties:
+        name:
+          type: string
+          title: Service Name
+          description: Name of the chatbot core API service
+        repoUrl:
+          title: GitHub Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts: ['github.com']
+
+  steps:
+    - id: fetch-base
+      name: Fetch Base Template
+      action: fetch:template
+      input:
+        url: ./templates/chatbot-core
+        values:
+          name: ${{ parameters.name }}
+
+    - id: publish
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: main
+        description: Chatbot core backend service
+
+    - id: register
+      name: Register in Catalog
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        catalogInfoPath: /catalog-info.yaml
