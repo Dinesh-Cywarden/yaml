@@ -1,0 +1,44 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: data-aggregation-service
+  title: Data Aggregation Service
+  description: Aggregates chatbot interaction data for analytics and reporting
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Nikhil
+  providesApis:
+    - aggregation-api
+  partOf:
+    - chatbot-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: usage-pattern-service
+  title: Usage Pattern Service
+  description: Analyzes chatbot usage patterns and peak interaction windows
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Nikhil
+  providesApis:
+    - usage-pattern-api
+  partOf:
+    - chatbot-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: error-tracking-service
+  title: Error Tracking Service
+  description: Monitors and reports chatbot errors and failure cases
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Nikhil
+  providesApis:
+    - error-tracking-api
+  partOf:
+    - system-monitoring-platform
