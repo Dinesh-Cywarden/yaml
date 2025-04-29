@@ -1,0 +1,49 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: chatbot-ui
+  title: Chatbot Web UI
+  description: Template for chatbot user interface frontend
+spec:
+  owner: ai-team/frontend
+  type: website
+
+  parameters:
+    - title: UI Setup
+      required:
+        - name
+        - repoUrl
+      properties:
+        name:
+          type: string
+          title: UI Name
+        repoUrl:
+          title: GitHub Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts: ['github.com']
+
+  steps:
+    - id: fetch-base
+      name: Fetch Frontend Template
+      action: fetch:template
+      input:
+        url: ./templates/chatbot-ui
+        values:
+          name: ${{ parameters.name }}
+
+    - id: publish
+      name: Publish UI to GitHub
+      action: publish:github
+      input:
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: main
+        description: Web interface for the AI chatbot
+
+    - id: register
+      name: Register UI in Catalog
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        catalogInfoPath: /catalog-info.yaml
