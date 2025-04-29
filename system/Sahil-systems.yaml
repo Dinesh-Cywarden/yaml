@@ -1,25 +1,17 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: System
 metadata:
-  name: user-journey-tracker
-  title: User Journey Tracker
-  description: Tracks user interaction flows within the chatbot and analytics portals
+  name: behavior-analytics-system
+  title: Behavior Analytics System
+  description: Analyzes user behavior patterns and chatbot usage trends
 spec:
-  type: service
-  lifecycle: production
   owner: user:Sahil
-  providesApis:
-    - journey-api
-  partOf:
-    - behavior-analytics-system
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: System
 metadata:
-  name: feedback-aggregation-service
-  title: Feedback Aggregation Service
-  description: Collects and aggregates feedback from chatbot users
+  name: feedback-analytics-system
+  title: Feedback Analytics System
+  description: Processes and visualizes user feedback for improvement cycles
 spec:
-  type: service
-  lifecycle: production
-  owner:
+  owner: user:Sahil
