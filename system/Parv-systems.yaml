@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ai-optimization-system
+  title: AI Optimization System
+  description: System that enhances chatbot AI capabilities by analyzing and retraining models
+spec:
+  owner: user:Parv
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: content-management-system
+  title: Content Management System
+  description: Stores and manages chatbot static and dynamic content
+spec:
+  owner: user:Parv
