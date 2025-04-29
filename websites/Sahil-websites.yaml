@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: journey-heatmap-portal
+  title: Journey Heatmap Portal
+  description: Web UI to visualize heatmaps of user chatbot interactions
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Sahil
+  system: behavior-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: feedback-dashboard
+  title: Feedback Dashboard
+  description: UI for viewing and filtering user feedback data
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Sahil
+  system: feedback-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: real-time-analytics-ui
+  title: Real-Time Analytics UI
+  description: Live dashboard showing current chatbot usage statistics
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Sahil
+  system: behavior-analytics-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sentiment-report-portal
+  title: Sentiment Report Portal
+  description: Visual report of sentiment analysis over time
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Sahil
+  system: feedback-analytics-system
