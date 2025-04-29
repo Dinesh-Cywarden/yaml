@@ -1,52 +1,44 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: chat-processing-service
-  title: Chat Processing Service
-  description: Core service that routes user messages to NLP and session store
+  name: user-journey-tracker
+  title: User Journey Tracker
+  description: Tracks user interaction flows within the chatbot and analytics portals
 spec:
-  lifecycle: production
-  owner: user:sahil
   type: service
+  lifecycle: production
+  owner: user:Sahil
   providesApis:
-    - chat-api
-  consumesApis:
-    - nlp-api
-    - session-api
+    - journey-api
   partOf:
-    - chatbot-system
+    - behavior-analytics-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: user-auth-service
-  title: User Authentication Service
-  description: Handles user sign-in, sign-up, and session validation
+  name: feedback-aggregation-service
+  title: Feedback Aggregation Service
+  description: Collects and aggregates feedback from chatbot users
 spec:
-  lifecycle: production
-  owner: user:sahil
   type: service
+  lifecycle: production
+  owner: user:Sahil
   providesApis:
-    - auth-api
-  consumesApis:
-    - db-api
+    - feedback-api
   partOf:
-    - auth-system
+    - feedback-analytics-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: analytics-service
-  title: Analytics Service
-  description: Tracks and aggregates usage metrics and user activity
+  name: real-time-metrics-service
+  title: Real-Time Metrics Service
+  description: Streams real-time chatbot usage metrics and KPIs
 spec:
-  lifecycle: production
-  owner: user:sahil
   type: service
+  lifecycle: production
+  owner: user:Sahil
   providesApis:
-    - analytics-api
-  consumesApis:
-    - db-api
+    - metrics-api
   partOf:
-    - analytics-system
----
+    - behavior-analytics-system
