@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: smart-dialog-system
+  title: Smart Dialog System
+  description: Handles intent detection and context flow in chatbot conversations
+spec:
+  owner: user:Ranjeet
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: conversation-rescue-system
+  title: Conversation Rescue System
+  description: Ensures graceful fallback responses and user support
+spec:
+  owner: user:Ranjeet
