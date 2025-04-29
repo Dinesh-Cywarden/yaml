@@ -1,0 +1,49 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: chatbot-prompts-service
+  title: Prompt Management Service
+  description: Manage dynamic LLM prompts for chatbot
+spec:
+  owner: ai-team/nlp
+  type: service
+
+  parameters:
+    - title: Prompt Service Setup
+      required:
+        - name
+        - repoUrl
+      properties:
+        name:
+          type: string
+          title: Prompt Service Name
+        repoUrl:
+          title: GitHub Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts: ['github.com']
+
+  steps:
+    - id: fetch-base
+      name: Fetch Prompt Template
+      action: fetch:template
+      input:
+        url: ./templates/chatbot-prompts
+        values:
+          name: ${{ parameters.name }}
+
+    - id: publish
+      name: Publish Prompt Service
+      action: publish:github
+      input:
+        repoUrl: ${{ parameters.repoUrl }}
+        defaultBranch: main
+        description: Prompt management microservice for chatbot
+
+    - id: register
+      name: Register Prompt Service
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        catalogInfoPath: /catalog-info.yaml
