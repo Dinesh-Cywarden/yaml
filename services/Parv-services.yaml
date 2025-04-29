@@ -1,52 +1,44 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: chat-processing-service
-  title: Chat Processing Service
-  description: Core service that routes user messages to NLP and session store
+  name: chatbot-training-service
+  title: Chatbot Training Service
+  description: Trains the chatbot using new conversation datasets and improves AI responses
 spec:
+  type: service
   lifecycle: production
   owner: user:Parv
-  type: service
   providesApis:
-    - chat-api
-  consumesApis:
-    - nlp-api
-    - session-api
+    - training-api
   partOf:
-    - chatbot-system
+    - ai-optimization-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: user-auth-service
-  title: User Authentication Service
-  description: Handles user sign-in, sign-up, and session validation
+  name: response-optimization-service
+  title: Response Optimization Service
+  description: Optimizes chatbot reply quality based on real-time user feedback
 spec:
+  type: service
   lifecycle: production
   owner: user:Parv
-  type: service
   providesApis:
-    - auth-api
-  consumesApis:
-    - db-api
+    - optimization-api
   partOf:
-    - auth-system
+    - ai-optimization-system
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: analytics-service
-  title: Analytics Service
-  description: Tracks and aggregates usage metrics and user activity
+  name: knowledge-base-service
+  title: Knowledge Base Service
+  description: Manages dynamic FAQs, help articles, and chatbot fallback replies
 spec:
+  type: service
   lifecycle: production
   owner: user:Parv
-  type: service
   providesApis:
-    - analytics-api
-  consumesApis:
-    - db-api
+    - knowledge-base-api
   partOf:
-    - analytics-system
----
+    - content-management-system
