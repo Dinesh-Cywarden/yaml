@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: message-priority-router
+  title: Message Priority Router
+  description: Routes messages based on urgency and user context within chatbot
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Udhav
+  providesApis:
+    - priority-routing-api
+  partOf:
+    - smart-routing-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: conversation-archive-service
+  title: Conversation Archive Service
+  description: Archives completed chatbot conversations for audit and review
+spec:
+  type: service
+  lifecycle: production
+  owner: user:Udhav
+  providesApis:
+    - archive
