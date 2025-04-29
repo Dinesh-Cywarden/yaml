@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: smart-routing-system
+  title: Smart Routing System
+  description: Directs messages dynamically to appropriate chatbot flows
+spec:
+  owner: user:Udhav
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: archive-system
+  title: Archive System
+  description: Handles long-term storage and retrieval of chatbot conversations
+spec:
+  owner: user:Udhav
