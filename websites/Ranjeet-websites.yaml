@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: intent-dashboard
+  title: Intent Dashboard
+  description: UI for reviewing detected intents and accuracy reports
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Ranjeet
+  system: smart-dialog-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: context-flow-visualizer
+  title: Context Flow Visualizer
+  description: Visualizes conversation threads and context history
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Ranjeet
+  system: smart-dialog-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: fallback-response-ui
+  title: Fallback Response UI
+  description: Web portal to review and customize fallback responses
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Ranjeet
+  system: conversation-rescue-system
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: conversation-review-tool
+  title: Conversation Review Tool
+  description: UI for chatbot QA and fallback intervention
+spec:
+  type: website
+  lifecycle: production
+  owner: user:Ranjeet
+  system: conversation-rescue-system
